@@ -44,6 +44,29 @@
         };
     };
 
+    macros {
+        to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_LAYER_0";
+        };
+
+        ZER00: ZER00 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER &kp ENTER>;
+            label = "ZER00";
+        };
+
+        ENT6: ENT6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER>;
+            label = "ENT6";
+        };
+    };
+
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
@@ -70,7 +93,7 @@
         FUNCTION {
             bindings = <
 &kp KP_EQUAL       &kp KP_PLUS  &kp KP_SUBTRACT  &kp KP_ASTERISK  &kp KP_SLASH                          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &kp SLASH
-&kp DOUBLE_QUOTES  &trans       &kp UP           &kp LC(F)        &kp F9                &trans  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans           &trans
+&kp DOUBLE_QUOTES  &ENT6        &kp UP           &kp LC(F)        &kp F9                &trans  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &ZER00           &trans
 &kp F4             &kp F7       &kp LC(C)        &kp LC(V)        &kp LC(SINGLE_QUOTE)  &trans  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans           &trans
 &trans             &trans       &trans           &trans           &trans                &trans  &trans  &trans                                                              &trans
             >;
