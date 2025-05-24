@@ -43,7 +43,6 @@
             key-positions = <24 25>;
         };
     };
-
     macros {
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
@@ -51,7 +50,21 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+        ZER00: ZER00 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER &kp ENTER>;
+            label = "ZER00";
+        };
+
+        ENT6: ENT6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER>;
+            label = "ENT6";
+        };
     };
+
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
