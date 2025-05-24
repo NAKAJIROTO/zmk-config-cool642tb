@@ -80,7 +80,6 @@
 
             label = "RET_KP";
         };
-
     };
 
     behaviors {
@@ -135,10 +134,10 @@
 
         MOUSE {
             bindings = <
-&bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans  &trans  &trans  &trans  &trans
-&trans           &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp PRINTSCREEN  &kp CAPSLOCK  &kp LC(C)     &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans           &trans        &trans        &trans        &trans        &trans  &trans  &trans                          &trans
+&bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans  &trans  &trans    &mkp MB2  &mo 5
+&trans           &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &mkp MB1  &trans    &trans
+&kp PRINTSCREEN  &kp CAPSLOCK  &kp LC(C)     &trans        &trans        &trans  &trans  &trans  &trans  &mkp MB1  &trans    &trans
+&trans           &trans        &trans        &trans        &trans        &trans  &trans  &trans                              &trans
             >;
         };
 
