@@ -45,11 +45,18 @@
     };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
+        ZER00: ZER00 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER &kp ENTER>;
+            label = "ZER00";
+        };
+
+        ENT6: ENT6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER>;
+            label = "ENT6";
         };
     };
 
@@ -74,13 +81,12 @@
 &kp Z      &kp X            &kp C              &kp V                &kp B        &kp DEL      &kp BACKSPACE  &kp N        &kp M  &kp COMMA  &kp TAB  &kp LS(TAB)
 &lt 5 DEL  &lt 3 LA(GRAVE)  &mt LEFT_ALT DOWN  &mt LEFT_CONTROL UP  &lt 2 SPACE  &lt 1 ENTER  &lt 2 SPACE    &lt 1 ENTER                             &mt RIGHT_SHIFT ESC
             >;
-
         };
 
         FUNCTION {
             bindings = <
 &kp KP_EQUAL       &kp KP_PLUS  &kp KP_SUBTRACT  &kp KP_ASTERISK  &kp KP_SLASH                          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &kp SLASH
-&kp DOUBLE_QUOTES  &kp UP         &kp UP           &kp LC(F)        &kp F9                &trans  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6   &kp UP        &trans
+&kp DOUBLE_QUOTES  &ENT6        &kp UP           &kp LC(F)        &kp F9                &trans  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &ZER00           &trans
 &kp F4             &kp F7       &kp LC(C)        &kp LC(V)        &kp LC(SINGLE_QUOTE)  &trans  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans           &trans
 &trans             &trans       &trans           &trans           &trans                &trans  &trans  &trans                                                              &trans
             >;
@@ -88,10 +94,10 @@
 
         NUM {
             bindings = <
-&kp ESC     &kp F1       &kp F2     &kp F3             &kp F4         &kp F5          &kp F6         &kp F7          &kp F8          &kp F9           &kp F10    &kp DEL     &kp BSPC
-&kp TAB     &kp AT_SIGN  &kp SQT    &kp DOUBLE_QUOTES  &kp SEMICOLON  &kp COLON       &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW    &kp RIGHT        &kp MINUS  &kp ENTER
-&kp LSHIFT  &kp Z        &kp X      &kp C              &kp V          &kp B           &kp LC(SPACE)  &kp RG(SPACE)   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp SLASH  &kp RSHIFT
-                         &kp LCTRL  &kp LGUI           &kp LALT       &kp UNDERSCORE  &trans
+&kp ESC          &kp F1     &kp F2      &kp F3      &kp F4                                    &kp F5         &kp F6     &kp F7         &kp F8          &kp F9
+&kp F10          &kp DEL    &kp BSPC    &kp TAB     &kp AT_SIGN  &kp SQT   &kp DOUBLE_QUOTES  &kp SEMICOLON  &kp COLON  &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW
+&kp RIGHT        &kp MINUS  &kp ENTER   &kp LSHIFT  &kp Z        &kp X     &kp C              &kp V          &kp B      &kp LC(SPACE)  &kp RG(SPACE)   &kp LEFT_BRACE
+&kp RIGHT_BRACE  &kp SLASH  &kp RSHIFT  &kp LCTRL   &kp LGUI     &kp LALT  &kp UNDERSCORE     &trans
             >;
         };
 
@@ -115,10 +121,10 @@
 
         SCROLL {
             bindings = <
-&kp ESC     &kp F1  &kp F2     &kp F3    &kp F4    &kp F5       &kp F6       &kp F7  &kp F8     &kp F9      &kp F10    &kp DEL     &kp BSPC
-&kp TAB     &kp A   &kp S      &kp D     &kp F     &kp G        &kp H        &kp J   &kp K      &kp L       &kp MINUS  &kp ENTER
-&kp LSHIFT  &kp Z   &kp X      &kp C     &kp V     &kp B        &kp N        &kp M   &kp COMMA  &kp PERIOD  &kp SLASH  &kp RSHIFT
-                    &kp LCTRL  &kp LGUI  &kp LALT  &lt 1 SPACE  &lt 2 SPACE
+&kp ESC     &kp F1     &kp F2      &kp F3      &kp F4                           &kp F5       &kp F6  &kp F7  &kp F8  &kp F9
+&kp F10     &kp DEL    &kp BSPC    &kp TAB     &kp A     &kp S     &kp D        &kp F        &kp G   &kp H   &kp J   &kp K
+&kp L       &kp MINUS  &kp ENTER   &kp LSHIFT  &kp Z     &kp X     &kp C        &kp V        &kp B   &kp N   &kp M   &kp COMMA
+&kp PERIOD  &kp SLASH  &kp RSHIFT  &kp LCTRL   &kp LGUI  &kp LALT  &lt 1 SPACE  &lt 2 SPACE
             >;
         };
 
