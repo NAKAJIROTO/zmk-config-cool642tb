@@ -6,8 +6,7 @@
 #include <input/processors.dtsi>
 #define MOUSE 4 // 各自のマウスレイヤーに合わせて設定
 &mkp_input_listener {
-input-processors
-<&zip_temp_layer MOUSE 250>;
+input-processors=<&zip_temp_layer MOUSE 250>;
 };
 
 #define SCROLL 5
