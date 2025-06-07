@@ -35,7 +35,7 @@
         };
 
         comb4 {
-            bindings = <&kp LC(GRAVE)>;
+            bindings = <&kp LA(GRAVE)>;
             key-positions = <3 4>;
             slow-release;
             layers = <0>;
