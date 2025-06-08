@@ -6,7 +6,7 @@
 #define MOUSE 4 // 各自のマウスレイヤーに合わせて設定
 
 // #includeのあとのあたりにスクロール量を変更
-//#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
 
 
 &mkp_input_listener { input-processors = <&zip_temp_layer MOUSE 250>; };
@@ -115,13 +115,13 @@
             tapping-term-ms = <200>;
         };
 // 新しいスクロール動作の追加
-//        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-//            compatible = "zmk,behavior-sensor-rotate";
-//            #sensor-binding-cells = <0>;
-//            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-//            // 追加: スクロールのタップ時間を設定 (20ms)
-//           tap-ms = <20>;
-//        };
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            // 追加: スクロールのタップ時間を設定 (20ms)
+           tap-ms = <20>;
+        };
 
 
     };
@@ -147,7 +147,9 @@
 &trans        &to 0        &trans        &trans           &trans                &lt 3 ENTER  &trans            &trans                                                              &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+//            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+                    sensor-bindings = <&encoder_msc_down_up>;
+
         };
 
         NUM {
@@ -158,7 +160,8 @@
 &trans                &trans                 &trans         &trans       &trans             &trans  &trans  &trans                                   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+//            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+                    sensor-bindings = <&encoder_msc_down_up>;
         };
 
         ARROW {
