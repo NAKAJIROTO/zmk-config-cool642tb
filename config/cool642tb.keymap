@@ -6,8 +6,8 @@
 #define MOUSE 4 // 各自のマウスレイヤーに合わせて設定
 
 // #includeのあとのあたりにスクロール量を変更
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
 &mkp_input_listener { input-processors = <&zip_temp_layer MOUSE 250>; };
 
@@ -106,20 +106,14 @@
     };
 
     behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
+        // 新しいスクロール動作の追加
 
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-// 新しいスクロール動作の追加
         encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
     };
@@ -134,7 +128,8 @@
 &kp Z              &kp X            &kp C              &kp V                       &kp B        &kp TAB      &kp LS(TAB)  &kp N        &kp M  &mkp MB1  &kp TAB  &kp LS(TAB)
 &mt LEFT_SHIFT UP  &mt LEFT_WIN UP  &mt LEFT_ALT DOWN  &mt LEFT_CONTROL BACKSPACE  &lt 2 SPACE  &lt 1 ENTER  &lt 2 DOWN   &lt 1 ENTER                            &kp LEFT_SHIFT
             >;
-                    sensor-bindings = <&encoder_msc_down_up>;
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         FUNCTION {
@@ -145,9 +140,7 @@
 &trans        &to 0        &trans        &trans           &trans                &lt 3 ENTER  &trans            &trans                                                              &trans
             >;
 
-
-                    sensor-bindings = <&encoder_msc_down_up>;
-
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         NUM {
@@ -158,8 +151,9 @@
 &trans                &trans                 &trans         &trans       &trans             &trans  &trans  &trans                                   &trans
             >;
 
-//            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
-                    sensor-bindings = <&encoder_msc_down_up>;
+            //            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         ARROW {
