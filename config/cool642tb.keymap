@@ -4,10 +4,9 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define MOUSE 4 // 各自のマウスレイヤーに合わせて設定
+// #includeのあとのあたりにスクロール量変更の定義を追記
 
-// #includeのあとのあたりにスクロール量を変更
-
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 &mkp_input_listener { input-processors = <&zip_temp_layer MOUSE 250>; };
 
@@ -106,17 +105,13 @@
     };
 
     behaviors {
-        // 新しいスクロール動作の追加
-
         encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
             tap-ms = <20>;
         };
-    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -139,8 +134,8 @@
 &kp F7        &kp MINUS    &kp LC(C)     &kp LC(V)        &kp LC(SINGLE_QUOTE)  &trans       &trans            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans           &trans
 &trans        &to 0        &trans        &trans           &trans                &lt 3 ENTER  &trans            &trans                                                              &trans
             >;
+                    sensor-bindings = <&encoder_msc_down_up>;
 
-            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         NUM {
@@ -150,10 +145,7 @@
 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH  &kp GRAVE    &kp DOUBLE_QUOTES  &trans  &trans  &kp F11  &kp SEMI  &kp COLON  &kp COMMA  &kp DOT
 &trans                &trans                 &trans         &trans       &trans             &trans  &trans  &trans                                   &trans
             >;
-
-            //            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
-
-            sensor-bindings = <&encoder_msc_down_up>;
+                    sensor-bindings = <&encoder_msc_down_up>;
         };
 
         ARROW {
@@ -164,7 +156,7 @@
 &trans             &trans           &trans    &trans     &trans  &trans  &trans  &trans                                      &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+                    sensor-bindings = <&encoder_msc_down_up>;
         };
 
         MOUSE {
@@ -175,7 +167,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                              &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+                    sensor-bindings = <&encoder_msc_down_up>;
         };
 
         SCROLL {
@@ -186,7 +178,7 @@
 &trans       &trans  &trans  &trans  &trans  &trans  &trans       &trans                                &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+                    sensor-bindings = <&encoder_msc_down_up>;
         };
 
         layer_6 {
