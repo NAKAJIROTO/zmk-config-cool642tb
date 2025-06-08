@@ -5,6 +5,10 @@
 
 #define MOUSE 4 // 各自のマウスレイヤーに合わせて設定
 
+// #includeのあとのあたりにスクロール量を変更
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
+
+
 &mkp_input_listener { input-processors = <&zip_temp_layer MOUSE 250>; };
 
 #define SCROLL 5
@@ -110,6 +114,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+// 新しいスクロール動作の追加
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            // 追加: スクロールのタップ時間を設定 (20ms)
+            tap-ms = <20>;
+        };
+
+
     };
 
     keymap {
@@ -122,8 +136,8 @@
 &kp Z              &kp X            &kp C              &kp V                       &kp B        &kp TAB      &kp LS(TAB)  &kp N        &kp M  &mkp MB1  &kp TAB  &kp LS(TAB)
 &mt LEFT_SHIFT UP  &mt LEFT_WIN UP  &mt LEFT_ALT DOWN  &mt LEFT_CONTROL BACKSPACE  &lt 2 SPACE  &lt 1 ENTER  &lt 2 DOWN   &lt 1 ENTER                            &kp LEFT_SHIFT
             >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+// 設定したいレイヤー
+sensor-bindings = <&scroll_up_down>;
         };
 
         FUNCTION {
@@ -134,7 +148,8 @@
 &trans        &to 0        &trans        &trans           &trans                &lt 3 ENTER  &trans            &trans                                                              &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+// 設定したいレイヤー
+sensor-bindings = <&scroll_up_down>;
         };
 
         NUM {
