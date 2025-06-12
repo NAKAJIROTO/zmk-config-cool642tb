@@ -140,7 +140,7 @@
             bindings = <
 &kp EQUAL  &kp KP_PLUS  &kp KP_MINUS  &kp KP_ASTERISK  &kp NUBS                                             &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp FSLH
 &kp F4     &ENTENT      &kp UP        &kp LC(F)        &kp F9                &to 0        &kp INT_MUHENKAN  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &OO              &trans
-&kp F7     &kp MINUS    &kp LC(C)     &kp LC(V)        &kp LC(SINGLE_QUOTE)  &trans       &trans            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp COLON        &trans
+&kp F7     &kp MINUS    &kp LC(C)     &kp LC(V)        &kp LC(SINGLE_QUOTE)  &trans       &trans            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans           &trans
 &trans     &to 0        &trans        &trans           &trans                &lt 3 ENTER  &trans            &trans                                                              &trans
             >;
 
