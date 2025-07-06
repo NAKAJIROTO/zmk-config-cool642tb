@@ -42,7 +42,6 @@
         comb4 {
             bindings = <&kp LA(GRAVE)>;
             key-positions = <3 4>;
-            layers = <0>;
         };
 
         com5 {
