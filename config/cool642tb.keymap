@@ -62,6 +62,16 @@
             bindings = <&kp RIGHT>;
             key-positions = <19 8>;
         };
+
+        combo7 {
+            bindings = <&CTHOME>;
+            key-positions = <8 9>;
+        };
+
+        combo8 {
+            bindings = <&CTEND>;
+            key-positions = <32 33>;
+        };
     };
 
     macros {
@@ -128,6 +138,20 @@
             #binding-cells = <0>;
             bindings = <&kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp LEFT>;
             label = "DQ";
+        };
+
+        CTHOME: CTHOME {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(HOME)>;
+            label = "CTHOME";
+        };
+
+        CTEND: CTEND {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(END)>;
+            label = "CTEND";
         };
     };
 
