@@ -193,7 +193,7 @@
 
         NUM {
             bindings = <
-&kp AT    &kp RS(UNDER)     &kp QUESTION          &kp PERCENT  &kp BSLH                           &kp F1   &kp F2    &kp F3     &kp F4     &kp F5
+&kp AT    &kp RS(UNDER)     &kp QUESTION          &kp PERCENT  &kp TILDE                          &kp F1   &kp F2    &kp F3     &kp F4     &kp F5
 &kp EXCL  &kp HASH          &kp DOLLAR            &kp CARET    &kp AMPS           &kp N1  &trans  &kp F6   &kp F7    &kp F8     &kp F9     &kp F10
 &kakko    &kp LS(LC(DOWN))  &kp LS(LC(UP_ARROW))  &kp GRAVE    &kp DOUBLE_QUOTES  &trans  &trans  &kp F11  &kp SEMI  &kp COLON  &kp COMMA  &kp DOT
 &trans    &trans            &trans                &trans       &trans             &trans  &trans  &trans                                   &trans
