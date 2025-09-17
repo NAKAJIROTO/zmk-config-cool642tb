@@ -235,7 +235,7 @@
             bindings = <
 &bootloader  &kp W   &kp E   &kp R   &kp T                        &kp Y   &kp U  &kp I      &kp O       &mo 5
 &kp A        &mo 5   &kp D   &kp F   &kp G   &kp N1  &bootloader  &kp H   &kp J  &kp K      &kp L       &kp ENTER
-&kp Z        &kp X   &kp C   &kp V   &kp B   &kp N3  &kp N4       &kp N   &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
+&kp Z        &kp X   &kp C   &kp V   &kp B   &trans  &kp N4       &kp N   &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
 &trans       &trans  &trans  &trans  &trans  &trans  &trans       &trans                                &trans
             >;
 
