@@ -1,6 +1,15 @@
 #include "cool642tb.dtsi"
 #include <input/processors.dtsi>
 
+&zip_temp_layer {
+    excluded-positions = <
+        18 // J
+        19 // K
+        21 // ;
+        34 // Ctrl
+    >;
+};
+
 #define MOUSE_LAYER 4
 #define SCROLL_LAYER 5
 
