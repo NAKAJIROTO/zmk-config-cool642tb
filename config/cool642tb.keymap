@@ -49,6 +49,11 @@
             key-positions = <5 6>;
             layers = <1>;
         };
+
+        AA {
+            bindings = <&kp A>;
+            key-positions = <39 40>;
+        };
     };
 
     macros {
