@@ -172,10 +172,10 @@
 
         FUNCTION {
             bindings = <
-&kp EQUAL   &kp KP_PLUS  &kp KP_MINUS  &kp KP_ASTERISK  &kp NUBS                                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp KP_SLASH
-&ENTENTENT  &kp LEFT     &kp UP_ARROW  &kp RIGHT        &kp F9                &trans       &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &OO              &trans
-&kp LC(F)   &ENTENT      &kp LC(C)     &kp LC(V)        &kp LC(SINGLE_QUOTE)  &none        &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans           &trans
-&trans      &to 0        &trans        &trans           &lt 4 SPACE           &lt 3 ENTER  &trans  &trans                                                              &kp DELETE
+&kp EQUAL   &kp KP_PLUS  &kp KP_MINUS  &kp KP_ASTERISK  &kp NUBS                              &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp KP_SLASH
+&ENTENTENT  &kp LEFT     &kp UP_ARROW  &kp RIGHT        &kp F9                &trans  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &OO              &trans
+&kp LC(F)   &ENTENT      &kp LC(C)     &kp LC(V)        &kp LC(SINGLE_QUOTE)  &none   &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans           &trans
+&trans      &to 0        &trans        &trans           &lt 4 SPACE           &trans  &trans  &trans                                                              &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -219,7 +219,7 @@
 &bootloader  &kp W   &kp E   &kp R   &kp T                        &kp Y   &kp U  &kp I      &kp O       &mo 5
 &kp A        &mo 5   &kp D   &kp F   &kp G   &kp N1  &bootloader  &kp H   &kp J  &kp K      &kp L       &kp ENTER
 &kp Z        &kp X   &kp C   &kp V   &kp B   &trans  &kp N4       &kp N   &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
-&trans       &trans  &trans  &trans  &trans  &mo 1   &trans       &trans                                &trans
+&trans       &trans  &trans  &trans  &trans  &trans  &trans       &trans                                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
