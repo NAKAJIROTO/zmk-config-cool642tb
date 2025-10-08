@@ -5,7 +5,7 @@
     excluded-positions = <
         18 // J
         19 // K
-        21 // ;
+        39 // ;
 
     >;
 };
