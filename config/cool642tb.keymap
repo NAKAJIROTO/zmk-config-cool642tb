@@ -45,6 +45,18 @@
 
             label = "RET_KP";
         };
+  ENTENT: ENTENT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER>;
+            label = "ENTENT";
+        };
+
+
+
+
+
+
     };
 
     behaviors {
