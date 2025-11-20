@@ -65,6 +65,11 @@
             bindings = <&CTEND>;
             key-positions = <32 33>;
         };
+
+        combo9 {
+            bindings = <&kp DEL>;
+            key-positions = <1 2>;
+        };
     };
 
     macros {
@@ -162,7 +167,6 @@
         };
     };
 
-
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
@@ -196,7 +200,6 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-
         FUNCTION {
             bindings = <
 &kp EQUAL   &kp KP_PLUS  &kp KP_MINUS  &kp KP_ASTERISK  &kp NUBS                                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp KP_SLASH
@@ -208,7 +211,6 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-
         NUM {
             bindings = <
 &kp AT    &kp RS(UNDER)     &kp QUESTION          &kp PERCENT  &kp TILDE                          &kp F1   &kp F2    &kp F3     &kp F4     &kp F5
@@ -219,7 +221,6 @@
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
-
 
         ARROW {
             bindings = <
@@ -242,7 +243,6 @@
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
-
 
         SCROLL {
             bindings = <
