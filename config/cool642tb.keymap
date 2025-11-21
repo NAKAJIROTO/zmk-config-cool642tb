@@ -4,8 +4,8 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // #includeのあとのあたりにスクロール量変更の定義を追記
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
 #define MOUSE 4
 #define SCROLL 5
@@ -180,11 +180,12 @@
             tapping-term-ms = <200>;
         };
 
-    encoder_msc_down_up: encoder_msc_down_up {
+        encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP> , <&msc SCRL_DOWN>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
             tap-ms = <20>;
         };
     };
@@ -195,12 +196,12 @@
         default_layer {
             bindings = <
 &kp Q      &kp W         &kp E              &kp R                       &kp T                                 &kp Y        &kp U  &kp I     &kp O    &kp P
-&kp A      &kp S         &kp D              &kp F                       &kp G        &kp B        &mo 4       &kp H        &kp J  &kp K     &kp L    &kp MINUS
+&kp A      &kp S         &kp D              &kp F                       &kp G        &kp B        &mo 3       &kp H        &kp J  &kp K     &kp L    &kp MINUS
 &kp Z      &kp X         &kp C              &kp V                       &kp B        &CALC        &mo 5       &kp N        &kp M  &mkp MB1  &kp TAB  &kp LS(TAB)
 &kp LSHFT  &kp LEFT_GUI  &mt LEFT_ALT DOWN  &mt LEFT_CONTROL BACKSPACE  &lt 2 SPACE  &lt 1 ENTER  &lt 2 DOWN  &lt 1 ENTER                            &kp ESCAPE
             >;
 
-                   sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         FUNCTION {
@@ -211,7 +212,7 @@
 &trans      &to 0        &trans        &trans           &lt 4 SPACE           &lt 3 ENTER  &trans  &trans                                                              &kp DELETE
             >;
 
-                   sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         NUM {
@@ -222,18 +223,18 @@
 &trans    &trans            &trans                &trans       &trans             &trans  &trans  &trans                                   &trans
             >;
 
-                   sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         ARROW {
             bindings = <
-&kp Q              &kp PRINTSCREEN  &kp E     &kp R      &kp T                   &bt BT_SEL 0  &bt BT_SEL 1  &kp I         &kp O       &kp P
-&kp A              &kp LEFT         &kp UP    &kp RIGHT  &kp G   &kp N1  &trans  &kp H         &kp LEFT      &kp UP_ARROW  &kp RIGHT   &trans
-&kp LA(LC(EQUAL))  &kp X            &kp DOWN  &kp V      &kp B   &trans  &trans  &kp N         &kp M         &kp DOWN      &kp PERIOD  &kp SLASH
-&trans             &trans           &trans    &trans     &trans  &trans  &trans  &trans                                                &trans
+&kp Q              &kp PRINTSCREEN  &kp E     &kp R      &kp LA(LC(TAB))                  &bt BT_SEL 0  &bt BT_SEL 1  &kp I         &kp O       &kp P
+&kp A              &kp LEFT         &kp UP    &kp RIGHT  &kp G            &kp N1  &trans  &kp H         &kp LEFT      &kp UP_ARROW  &kp RIGHT   &trans
+&kp LA(LC(EQUAL))  &kp X            &kp DOWN  &kp V      &kp B            &trans  &trans  &kp N         &kp M         &kp DOWN      &kp PERIOD  &kp SLASH
+&trans             &trans           &trans    &trans     &trans           &trans  &trans  &trans                                                &trans
             >;
 
-                   sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         MOUSE {
@@ -244,7 +245,7 @@
 &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans                              &trans
             >;
 
-                   sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         SCROLL {
@@ -255,7 +256,7 @@
 &trans       &trans  &trans  &trans  &trans  &mo 1   &trans       &trans                                &trans
             >;
 
-                   sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         layer_6 {
