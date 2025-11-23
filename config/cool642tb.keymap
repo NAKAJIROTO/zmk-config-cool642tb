@@ -235,7 +235,7 @@
 
         ARROW {
             bindings = <
-&SUM               &kp PRINTSCREEN  &kp LG(E)  &kp LC(N1)  &kp LA(LC(TAB))                  &bt BT_SEL 0  &bt BT_SEL 1  &kp I         &kp O       &kp P
+&kp LA(EQUAL)      &kp PRINTSCREEN  &kp LG(E)  &kp LC(N1)  &kp LA(LC(TAB))                  &bt BT_SEL 0  &bt BT_SEL 1  &kp I         &kp O       &kp P
 &kp A              &kp LEFT         &kp LG(D)  &kp RIGHT   &kp G            &kp N1  &trans  &kp H         &kp LEFT      &kp UP_ARROW  &kp RIGHT   &trans
 &kp LA(LC(EQUAL))  &kp X            &kp DOWN   &kp LG(V)   &kp B            &trans  &trans  &kp N         &kp M         &kp DOWN      &kp PERIOD  &kp SLASH
 &trans             &trans           &trans     &trans      &trans           &trans  &trans  &trans                                                &trans
