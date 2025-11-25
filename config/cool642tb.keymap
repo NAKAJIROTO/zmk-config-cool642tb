@@ -203,8 +203,8 @@
         default_layer {
             bindings = <
 &kp Q      &kp W         &kp E              &kp R                       &kp T                                 &kp Y        &kp U  &kp I     &kp O    &kp P
-&kp A      &kp S         &kp D              &kp F                       &kp G        &kp A        &mo 3       &kp H        &kp J  &kp K     &kp L    &kp MINUS
-&kp Z      &kp X         &kp C              &kp V                       &kp B        &CALC        &mo 6       &kp N        &kp M  &mkp MB1  &kp TAB  &kp LS(TAB)
+&kp A      &kp S         &kp D              &kp F                       &kp G        &kp A        &CALC       &kp H        &kp J  &kp K     &kp L    &kp MINUS
+&kp Z      &kp X         &kp C              &kp V                       &kp B        &mo 3        &mo 6       &kp N        &kp M  &mkp MB1  &kp TAB  &kp LS(TAB)
 &kp LSHFT  &kp LEFT_GUI  &mt LEFT_ALT DOWN  &mt LEFT_CONTROL BACKSPACE  &lt 2 SPACE  &lt 1 ENTER  &lt 2 DOWN  &lt 1 ENTER                            &kp ESCAPE
             >;
 
@@ -214,7 +214,7 @@
         FUNCTION {
             bindings = <
 &kp EQUAL   &kp KP_PLUS  &kp KP_MINUS  &kp KP_ASTERISK  &kp NUBS                                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp KP_SLASH
-&ENTENTENT  &kp LEFT     &kp UP_ARROW  &kp RIGHT        &kp F9                &kp B        &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &OO              &trans
+&ENTENTENT  &kp LEFT     &kp UP_ARROW  &kp RIGHT        &kp F9                &trans       &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &OO              &trans
 &kp LC(F)   &ENTENT      &kp LC(C)     &kp LC(V)        &kp LC(SINGLE_QUOTE)  &trans       &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans           &trans
 &trans      &to 0        &trans        &trans           &lt 2 SPACE           &lt 3 ENTER  &trans  &trans                                                              &kp DELETE
             >;
@@ -236,7 +236,7 @@
         ARROW {
             bindings = <
 &kp LA(EQUAL)      &kp PRINTSCREEN  &kp LG(E)  &kp LC(N1)  &kp LA(LC(TAB))                  &bt BT_SEL 0  &bt BT_SEL 1  &kp I         &kp O       &kp P
-&kp A              &kp LEFT         &kp LG(D)  &kp RIGHT   &kp G            &kp N1  &trans  &kp H         &kp LEFT      &kp UP_ARROW  &kp RIGHT   &trans
+&kp A              &kp LEFT         &kp LG(D)  &kp RIGHT   &kp G            &trans  &trans  &kp H         &kp LEFT      &kp UP_ARROW  &kp RIGHT   &trans
 &kp LA(LC(EQUAL))  &kp X            &kp DOWN   &kp LG(V)   &kp B            &trans  &trans  &kp N         &kp M         &kp DOWN      &kp PERIOD  &kp SLASH
 &trans             &trans           &trans     &trans      &trans           &trans  &trans  &trans                                                &trans
             >;
@@ -247,7 +247,7 @@
         MOUSE {
             bindings = <
 &kp Q   &kp W   &kp E   &kp R   &trans                  &mo 0   &kp U   &kp I     &mkp MB2  &mo 5
-&kp A   &mo 5   &kp D   &kp F   &kp G   &kp N1  &kp N2  &kp H   &trans  &DBC      &mkp MB2  &kp ENTER
+&kp A   &mo 5   &kp D   &kp F   &kp G   &trans  &kp N2  &kp H   &trans  &DBC      &mkp MB2  &kp ENTER
 &kp Z   &kp X   &kp C   &kp V   &kp B   &trans  &trans  &kp N   &kp M   &mkp MB1  &mkp MB2  &kp SLASH
 &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans                              &trans
             >;
@@ -258,9 +258,9 @@
         SCROLL {
             bindings = <
 &bootloader  &kp W   &kp E   &kp R   &kp T                        &kp Y   &kp U  &kp I      &kp O       &mo 5
-&kp A        &mo 5   &kp D   &kp F   &kp G   &kp N1  &bootloader  &kp H   &kp J  &kp K      &kp L       &kp ENTER
+&kp A        &mo 5   &kp D   &kp F   &kp G   &trans  &bootloader  &kp H   &kp J  &kp K      &kp L       &kp ENTER
 &kp Z        &kp X   &kp C   &kp V   &kp B   &trans  &kp N4       &kp N   &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
-&trans       &trans  &trans  &trans  &trans  &mo 1   &trans       &trans                                &trans
+&trans       &trans  &trans  &trans  &trans  &trans  &trans       &trans                                &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -269,9 +269,9 @@
         layer_6 {
             bindings = <
 &kp Q       &kp W      &kp E     &kp R     &kp T                        &kp Y        &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S      &kp D     &kp F     &kp G        &kp N1  &kp N2  &kp H        &kp J  &kp K      &kp L       &kp ENTER
-&kp Z       &kp X      &kp C     &kp V     &kp B        &kp N3  &kp N4  &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
-&kp RSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  &lt 1 SPACE  &kp N5  &kp N6  &lt 2 SPACE                                &kp BSPC
+&kp A       &kp S      &kp D     &kp F     &kp G        &trans  &trans  &kp H        &kp J  &kp K      &kp L       &kp ENTER
+&kp Z       &kp X      &kp C     &kp V     &kp B        &trans  &trans  &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
+&kp RSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  &lt 1 SPACE  &trans  &trans  &lt 2 SPACE                                &kp BSPC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
