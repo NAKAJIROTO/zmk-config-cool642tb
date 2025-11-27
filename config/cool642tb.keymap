@@ -216,12 +216,12 @@
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
-        SYSTEM {
+        ARROW {
             bindings = <
-&none           &none         &none         &none         &none                             &none   &none  &none          &none      &none
-&none           &none         &none         &none         &none         &trans      &trans  &none   &none  &none          &none      &none
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &trans  &none   &none  &kp RIGHT_WIN  &kp RCTRL  &kp RIGHT_SHIFT
-&trans          &trans        &trans        &trans        &trans        &trans      &trans  &trans                                   &trans
+&kp LA(EQUAL)      &kp PRINTSCREEN  &kp LG(E)  &kp LC(N1)  &kp LA(LC(TAB))                  &bt BT_SEL 0  &bt BT_SEL 1  &kp I         &kp O       &kp P
+&kp A              &kp LEFT         &kp LG(D)  &kp RIGHT   &kp G            &trans  &trans  &kp H         &kp LEFT      &kp UP_ARROW  &kp RIGHT   &trans
+&kp LA(LC(EQUAL))  &kp X            &kp DOWN   &kp LG(V)   &kp B            &trans  &trans  &kp N         &kp M         &kp DOWN      &kp PERIOD  &kp SLASH
+&trans             &trans           &trans     &trans      &trans           &trans  &trans  &trans                                                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -229,10 +229,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                     &trans  &trans     &mkp MCLK  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &mkp LCLK  &mo 5      &mkp RCLK  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans                                   &trans
+&kp Q   &kp W   &kp E   &kp R   &trans                  &mo 0   &kp U   &kp I     &mkp MB2  &mo 5
+&kp A   &mo 5   &kp D   &kp F   &kp G   &trans  &kp N2  &kp H   &trans  &DBC      &mkp MB2  &kp ENTER
+&kp Z   &kp X   &kp C   &kp V   &kp B   &trans  &trans  &kp N   &kp M   &mkp MB1  &mkp MB2  &kp SLASH
+&trans  &trans  &trans  &trans  &trans  &none   &trans  &trans                              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -240,10 +240,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                     &trans  &trans     &mkp MCLK  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &mkp LCLK  &mo 5      &mkp RCLK  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans                                   &trans
+&bootloader  &kp W   &kp E   &kp R   &kp T                        &kp Y   &kp U  &kp I      &kp O       &mo 5
+&kp A        &mo 5   &kp D   &kp F   &kp G   &trans  &bootloader  &kp H   &kp J  &kp K      &kp L       &kp ENTER
+&kp Z        &kp X   &kp C   &kp V   &kp B   &trans  &kp N4       &kp N   &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
+&trans       &trans  &trans  &trans  &trans  &trans  &trans       &trans                                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
