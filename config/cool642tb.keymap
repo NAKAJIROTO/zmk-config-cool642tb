@@ -83,7 +83,14 @@
             label = "TO_LAYER_0";
         };
 
-        ret_kp: ret_kp {
+        /omit-if-no-ref/ to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_LAYER_0";
+        };
+        
+        /omit-if-no-ref/ ret_kp: ret_kp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -94,7 +101,6 @@
                 <&macro_param_1to1>,
                 <&macro_release>,
                 <&kp MACRO_PLACEHOLDER>;
-
             label = "RET_KP";
         };
 
@@ -195,6 +201,15 @@
 
             tap-ms = <20>;
         };
+        /omit-if-no-ref/ lt_to_layer_0: lt_to_layer_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TO_0";
+            bindings = <&mo>, <&to_layer_0>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
     };
 
     keymap {
