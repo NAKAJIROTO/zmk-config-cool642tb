@@ -12,6 +12,60 @@
 / {
     combos {
         compatible = "zmk,combos";
+
+        comb1 {
+            bindings = <&kp LS(ESCAPE)>;
+            key-positions = <0 1>;
+        };
+
+        comb2 {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <18 7>;
+        };
+
+        comb3 {
+            bindings = <&kp CAPS>;
+            key-positions = <13 14>;
+        };
+
+        comb4 {
+            bindings = <&kp LA(GRAVE)>;
+            key-positions = <3 4>;
+        };
+
+        com5 {
+            bindings = <&to 1>;
+            key-positions = <5 6>;
+            slow-release;
+            layers = <0>;
+        };
+
+        comb6 {
+            bindings = <&to 0>;
+            key-positions = <5 6>;
+            slow-release;
+            layers = <1>;
+        };
+
+        combo6 {
+            bindings = <&kp F2>;
+            key-positions = <19 8>;
+        };
+
+        combo7 {
+            bindings = <&CTHOME>;
+            key-positions = <8 9>;
+        };
+
+        combo8 {
+            bindings = <&CTEND>;
+            key-positions = <32 33>;
+        };
+
+        combo9 {
+            bindings = <&kp DEL>;
+            key-positions = <1 2>;
+        };
     };
 
     macros {
