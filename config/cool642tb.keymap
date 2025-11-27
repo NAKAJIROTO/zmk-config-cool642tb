@@ -12,7 +12,165 @@
 / {
     combos {
         compatible = "zmk,combos";
+
+        comb1 {
+            bindings = <&kp LS(ESCAPE)>;
+            key-positions = <0 1>;
+        };
+
+        comb2 {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <18 7>;
+        };
+
+        comb3 {
+            bindings = <&kp CAPS>;
+            key-positions = <13 14>;
+        };
+
+        comb4 {
+            bindings = <&kp LA(GRAVE)>;
+            key-positions = <3 4>;
+        };
+
+        com5 {
+            bindings = <&to 1>;
+            key-positions = <5 6>;
+            slow-release;
+            layers = <0>;
+        };
+
+        comb6 {
+            bindings = <&to 0>;
+            key-positions = <5 6>;
+            slow-release;
+            layers = <1>;
+        };
+
+        combo6 {
+            bindings = <&kp F2>;
+            key-positions = <19 8>;
+        };
+
+        combo7 {
+            bindings = <&CTHOME>;
+            key-positions = <8 9>;
+        };
+
+        combo8 {
+            bindings = <&CTEND>;
+            key-positions = <32 33>;
+        };
+
+        combo9 {
+            bindings = <&kp DEL>;
+            key-positions = <1 2>;
+        };
     };
+
+    macros {
+        to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_LAYER_0";
+        };
+
+        ret_kp: ret_kp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&to 0 &macro_param_1to1>,
+                <&macro_press>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&macro_release>,
+                <&kp MACRO_PLACEHOLDER>;
+
+            label = "RET_KP";
+        };
+
+        ENTENT: ENTENT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER>;
+            label = "ENTENT";
+        };
+
+        OO: OO {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp KP_NUMBER_0 &kp KP_NUMBER_0>;
+            label = "OO";
+        };
+
+        DBC: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB1>, <&macro_wait_time 100>, <&mkp MB1>;
+
+            label = "NEW_MACRO";
+        };
+
+        PAV: PAV {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(V)) &kp V &kp ENTER>;
+            label = "PAV";
+        };
+
+        kakko: kakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
+            label = "KAKKO";
+        };
+
+        DQ: DQ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp LEFT>;
+            label = "DQ";
+        };
+
+        CTHOME: CTHOME {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(HOME)>;
+            label = "CTHOME";
+        };
+
+        CTEND: CTEND {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(END)>;
+            label = "CTEND";
+        };
+
+        ENTENTENT: ENTENTENT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER>;
+            label = "ENTENTENT";
+        };
+
+        CALC: CALC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1)>;
+            label = "CALC";
+        };
+
+        SUM: SUM {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(S) &kp U &kp M>;
+            label = "SUM";
+        };
+    };
+
+
 
     macros {
         /omit-if-no-ref/ to_layer_0: to_layer_0 {
