@@ -216,7 +216,7 @@
 &kp EQUAL   &kp KP_PLUS  &kp KP_MINUS  &kp KP_ASTERISK  &kp NUBS                                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp KP_SLASH
 &ENTENTENT  &kp LEFT     &kp UP_ARROW  &kp RIGHT        &kp F9                &trans       &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &OO              &trans
 &kp LC(F)   &ENTENT      &kp LC(C)     &kp LC(V)        &kp LC(SINGLE_QUOTE)  &trans       &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans           &trans
-&trans      &to 0        &trans        &trans           &lt 2 SPACE           &lt 3 ENTER  &trans  &trans                                                              &kp DELETE
+&trans      &trans       &trans        &trans           &lt 2 SPACE           &lt 3 ENTER  &trans  &trans                                                              &kp DELETE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
