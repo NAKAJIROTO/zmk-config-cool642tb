@@ -76,7 +76,7 @@
 
         AAA {
             bindings = <&kp A>;
-            key-positions = <39 40>;
+            key-positions = <31 30>;
         };
     };
 
