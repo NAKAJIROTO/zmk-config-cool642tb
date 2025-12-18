@@ -191,6 +191,9 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
 
+             debounce-delay-ms = <20>;  // チャタリング防止: 20ms デバウンス
+
+
         };
 
         encoder_msc_down_up: encoder_msc_down_up {
