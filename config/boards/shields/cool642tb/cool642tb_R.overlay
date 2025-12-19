@@ -88,7 +88,7 @@
     smaller_dpi {
         layers = <6>;
         input-processors =
-        <&sensor_rotation_right>,
+        <&sensor_rotation_right>
             <&zip_xy_scaler 1 5>;
     };
 
@@ -97,7 +97,7 @@
         input-processors = 
             <&sensor_rotation_right>,
             <&zip_xy_scaler 1 1>,
-            <&zip_temp_layer 3 5000>; 
+            <&zip_temp_layer 4 5000>; 
     };
 };
 
