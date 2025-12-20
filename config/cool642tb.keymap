@@ -76,7 +76,7 @@
 
         ASD {
             bindings = <&kp A>;
-            key-positions = <31 20>;
+            key-positions = <4 14>;
         };
     };
 
@@ -197,7 +197,9 @@
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-  // カンマで区切る
+
+            // カンマで区切る
+
             tap-ms = <20>;
         };
     };
