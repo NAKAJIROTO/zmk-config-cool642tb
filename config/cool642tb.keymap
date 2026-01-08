@@ -75,8 +75,13 @@
         };
 
         ASD {
-            bindings = <&kp A>;
-            key-positions = <4 14>;
+            bindings = <&kp TAB>;
+            key-positions = <13 12>;
+        };
+
+        TAB2 {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <18 19>;
         };
     };
 
